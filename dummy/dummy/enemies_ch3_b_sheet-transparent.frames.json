@@ -1,0 +1,391 @@
+{
+  "image": "/generated-assets/enemies_ch3_b_sheet-transparent.webp",
+  "grid": {
+    "cols": 5,
+    "rows": 4,
+    "frameWidth": 320,
+    "frameHeight": 320
+  },
+  "frames": [
+    {
+      "name": "lavacrab_patrol",
+      "source": {
+        "x": 56,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 47,
+        "y": 122,
+        "w": 319,
+        "h": 209
+      },
+      "anchor": {
+        "x": 207,
+        "y": 330
+      }
+    },
+    {
+      "name": "lavacrab_telegraph",
+      "source": {
+        "x": 440,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 450,
+        "y": 66,
+        "w": 291,
+        "h": 265
+      },
+      "anchor": {
+        "x": 596,
+        "y": 330
+      }
+    },
+    {
+      "name": "lavacrab_attack",
+      "source": {
+        "x": 824,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 793,
+        "y": 117,
+        "w": 416,
+        "h": 216
+      },
+      "anchor": {
+        "x": 1001,
+        "y": 332
+      }
+    },
+    {
+      "name": "lavacrab_hit",
+      "source": {
+        "x": 1208,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1246,
+        "y": 97,
+        "w": 286,
+        "h": 234
+      },
+      "anchor": {
+        "x": 1389,
+        "y": 330
+      }
+    },
+    {
+      "name": "lavacrab_defeat",
+      "source": {
+        "x": 1592,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1585,
+        "y": 87,
+        "w": 354,
+        "h": 245
+      },
+      "anchor": {
+        "x": 1762,
+        "y": 331
+      }
+    },
+    {
+      "name": "cloudray_patrol",
+      "source": {
+        "x": 56,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 47,
+        "y": 422,
+        "w": 315,
+        "h": 282
+      },
+      "anchor": {
+        "x": 205,
+        "y": 703
+      }
+    },
+    {
+      "name": "cloudray_telegraph",
+      "source": {
+        "x": 440,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 415,
+        "y": 418,
+        "w": 334,
+        "h": 333
+      },
+      "anchor": {
+        "x": 582,
+        "y": 750
+      }
+    },
+    {
+      "name": "cloudray_attack",
+      "source": {
+        "x": 824,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 803,
+        "y": 440,
+        "w": 412,
+        "h": 235
+      },
+      "anchor": {
+        "x": 1009,
+        "y": 674
+      }
+    },
+    {
+      "name": "cloudray_hit",
+      "source": {
+        "x": 1208,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1255,
+        "y": 444,
+        "w": 281,
+        "h": 255
+      },
+      "anchor": {
+        "x": 1396,
+        "y": 698
+      }
+    },
+    {
+      "name": "cloudray_defeat",
+      "source": {
+        "x": 1592,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1601,
+        "y": 486,
+        "w": 324,
+        "h": 224
+      },
+      "anchor": {
+        "x": 1763,
+        "y": 709
+      }
+    },
+    {
+      "name": "prismlion_patrol",
+      "source": {
+        "x": 56,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 43,
+        "y": 813,
+        "w": 322,
+        "h": 271
+      },
+      "anchor": {
+        "x": 204,
+        "y": 1083
+      }
+    },
+    {
+      "name": "prismlion_telegraph",
+      "source": {
+        "x": 440,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 414,
+        "y": 858,
+        "w": 342,
+        "h": 226
+      },
+      "anchor": {
+        "x": 585,
+        "y": 1083
+      }
+    },
+    {
+      "name": "prismlion_attack",
+      "source": {
+        "x": 824,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 785,
+        "y": 745,
+        "w": 428,
+        "h": 341
+      },
+      "anchor": {
+        "x": 999,
+        "y": 1085
+      }
+    },
+    {
+      "name": "prismlion_hit",
+      "source": {
+        "x": 1208,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1250,
+        "y": 817,
+        "w": 277,
+        "h": 267
+      },
+      "anchor": {
+        "x": 1389,
+        "y": 1083
+      }
+    },
+    {
+      "name": "prismlion_defeat",
+      "source": {
+        "x": 1592,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1584,
+        "y": 943,
+        "w": 356,
+        "h": 142
+      },
+      "anchor": {
+        "x": 1762,
+        "y": 1084
+      }
+    },
+    {
+      "name": "eclipseowl_patrol",
+      "source": {
+        "x": 56,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 53,
+        "y": 1153,
+        "w": 316,
+        "h": 301
+      },
+      "anchor": {
+        "x": 211,
+        "y": 1453
+      }
+    },
+    {
+      "name": "eclipseowl_telegraph",
+      "source": {
+        "x": 440,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 424,
+        "y": 1130,
+        "w": 337,
+        "h": 363
+      },
+      "anchor": {
+        "x": 593,
+        "y": 1492
+      }
+    },
+    {
+      "name": "eclipseowl_attack",
+      "source": {
+        "x": 824,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 815,
+        "y": 1149,
+        "w": 390,
+        "h": 346
+      },
+      "anchor": {
+        "x": 1010,
+        "y": 1494
+      }
+    },
+    {
+      "name": "eclipseowl_hit",
+      "source": {
+        "x": 1208,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1236,
+        "y": 1170,
+        "w": 289,
+        "h": 304
+      },
+      "anchor": {
+        "x": 1381,
+        "y": 1473
+      }
+    },
+    {
+      "name": "eclipseowl_defeat",
+      "source": {
+        "x": 1592,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1533,
+        "y": 1287,
+        "w": 410,
+        "h": 204
+      },
+      "anchor": {
+        "x": 1738,
+        "y": 1490
+      }
+    }
+  ]
+}

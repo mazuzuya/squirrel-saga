@@ -1,0 +1,391 @@
+{
+  "image": "/generated-assets/enemies_new_weird_sheet-transparent.webp",
+  "grid": {
+    "cols": 5,
+    "rows": 4,
+    "frameWidth": 320,
+    "frameHeight": 320
+  },
+  "frames": [
+    {
+      "name": "gearspider_patrol",
+      "source": {
+        "x": 56,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 39,
+        "y": 99,
+        "w": 323,
+        "h": 211
+      },
+      "anchor": {
+        "x": 201,
+        "y": 309
+      }
+    },
+    {
+      "name": "gearspider_telegraph",
+      "source": {
+        "x": 440,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 423,
+        "y": 37,
+        "w": 328,
+        "h": 272
+      },
+      "anchor": {
+        "x": 587,
+        "y": 308
+      }
+    },
+    {
+      "name": "gearspider_attack",
+      "source": {
+        "x": 824,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 806,
+        "y": 83,
+        "w": 385,
+        "h": 204
+      },
+      "anchor": {
+        "x": 999,
+        "y": 286
+      }
+    },
+    {
+      "name": "gearspider_hit",
+      "source": {
+        "x": 1208,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1233,
+        "y": 65,
+        "w": 304,
+        "h": 247
+      },
+      "anchor": {
+        "x": 1385,
+        "y": 311
+      }
+    },
+    {
+      "name": "gearspider_defeat",
+      "source": {
+        "x": 1592,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1587,
+        "y": 57,
+        "w": 346,
+        "h": 254
+      },
+      "anchor": {
+        "x": 1760,
+        "y": 310
+      }
+    },
+    {
+      "name": "bogstalker_patrol",
+      "source": {
+        "x": 56,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 56,
+        "y": 375,
+        "w": 296,
+        "h": 329
+      },
+      "anchor": {
+        "x": 204,
+        "y": 703
+      }
+    },
+    {
+      "name": "bogstalker_telegraph",
+      "source": {
+        "x": 440,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 442,
+        "y": 347,
+        "w": 273,
+        "h": 357
+      },
+      "anchor": {
+        "x": 579,
+        "y": 703
+      }
+    },
+    {
+      "name": "bogstalker_attack",
+      "source": {
+        "x": 824,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 771,
+        "y": 412,
+        "w": 443,
+        "h": 290
+      },
+      "anchor": {
+        "x": 993,
+        "y": 701
+      }
+    },
+    {
+      "name": "bogstalker_hit",
+      "source": {
+        "x": 1208,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1240,
+        "y": 379,
+        "w": 297,
+        "h": 324
+      },
+      "anchor": {
+        "x": 1389,
+        "y": 702
+      }
+    },
+    {
+      "name": "bogstalker_defeat",
+      "source": {
+        "x": 1592,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1570,
+        "y": 535,
+        "w": 371,
+        "h": 171
+      },
+      "anchor": {
+        "x": 1756,
+        "y": 705
+      }
+    },
+    {
+      "name": "skyjelly_patrol",
+      "source": {
+        "x": 56,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 74,
+        "y": 742,
+        "w": 238,
+        "h": 356
+      },
+      "anchor": {
+        "x": 193,
+        "y": 1097
+      }
+    },
+    {
+      "name": "skyjelly_telegraph",
+      "source": {
+        "x": 440,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 443,
+        "y": 741,
+        "w": 290,
+        "h": 358
+      },
+      "anchor": {
+        "x": 588,
+        "y": 1098
+      }
+    },
+    {
+      "name": "skyjelly_attack",
+      "source": {
+        "x": 824,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 780,
+        "y": 779,
+        "w": 431,
+        "h": 295
+      },
+      "anchor": {
+        "x": 996,
+        "y": 1073
+      }
+    },
+    {
+      "name": "skyjelly_hit",
+      "source": {
+        "x": 1208,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1231,
+        "y": 769,
+        "w": 293,
+        "h": 303
+      },
+      "anchor": {
+        "x": 1378,
+        "y": 1071
+      }
+    },
+    {
+      "name": "skyjelly_defeat",
+      "source": {
+        "x": 1592,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1601,
+        "y": 787,
+        "w": 319,
+        "h": 300
+      },
+      "anchor": {
+        "x": 1761,
+        "y": 1086
+      }
+    },
+    {
+      "name": "starwraith_patrol",
+      "source": {
+        "x": 56,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 55,
+        "y": 1145,
+        "w": 299,
+        "h": 359
+      },
+      "anchor": {
+        "x": 205,
+        "y": 1503
+      }
+    },
+    {
+      "name": "starwraith_telegraph",
+      "source": {
+        "x": 440,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 413,
+        "y": 1139,
+        "w": 347,
+        "h": 404
+      },
+      "anchor": {
+        "x": 587,
+        "y": 1542
+      }
+    },
+    {
+      "name": "starwraith_attack",
+      "source": {
+        "x": 824,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 794,
+        "y": 1171,
+        "w": 424,
+        "h": 270
+      },
+      "anchor": {
+        "x": 1006,
+        "y": 1440
+      }
+    },
+    {
+      "name": "starwraith_hit",
+      "source": {
+        "x": 1208,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1254,
+        "y": 1137,
+        "w": 296,
+        "h": 365
+      },
+      "anchor": {
+        "x": 1402,
+        "y": 1501
+      }
+    },
+    {
+      "name": "starwraith_defeat",
+      "source": {
+        "x": 1592,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1615,
+        "y": 1183,
+        "w": 302,
+        "h": 306
+      },
+      "anchor": {
+        "x": 1766,
+        "y": 1488
+      }
+    }
+  ]
+}

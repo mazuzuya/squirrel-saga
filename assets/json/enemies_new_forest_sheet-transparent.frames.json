@@ -1,0 +1,391 @@
+{
+  "image": "/generated-assets/enemies_new_forest_sheet-transparent.webp",
+  "grid": {
+    "cols": 5,
+    "rows": 4,
+    "frameWidth": 320,
+    "frameHeight": 320
+  },
+  "frames": [
+    {
+      "name": "thornboar_patrol",
+      "source": {
+        "x": 56,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 32,
+        "y": 120,
+        "w": 355,
+        "h": 237
+      },
+      "anchor": {
+        "x": 210,
+        "y": 356
+      }
+    },
+    {
+      "name": "thornboar_telegraph",
+      "source": {
+        "x": 440,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 435,
+        "y": 83,
+        "w": 348,
+        "h": 285
+      },
+      "anchor": {
+        "x": 609,
+        "y": 367
+      }
+    },
+    {
+      "name": "thornboar_attack",
+      "source": {
+        "x": 824,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 814,
+        "y": 127,
+        "w": 380,
+        "h": 237
+      },
+      "anchor": {
+        "x": 1004,
+        "y": 363
+      }
+    },
+    {
+      "name": "thornboar_hit",
+      "source": {
+        "x": 1208,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1223,
+        "y": 112,
+        "w": 308,
+        "h": 255
+      },
+      "anchor": {
+        "x": 1377,
+        "y": 366
+      }
+    },
+    {
+      "name": "thornboar_defeat",
+      "source": {
+        "x": 1592,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1559,
+        "y": 198,
+        "w": 388,
+        "h": 171
+      },
+      "anchor": {
+        "x": 1753,
+        "y": 368
+      }
+    },
+    {
+      "name": "conewasp_patrol",
+      "source": {
+        "x": 56,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 46,
+        "y": 422,
+        "w": 301,
+        "h": 268
+      },
+      "anchor": {
+        "x": 197,
+        "y": 689
+      }
+    },
+    {
+      "name": "conewasp_telegraph",
+      "source": {
+        "x": 440,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 407,
+        "y": 401,
+        "w": 371,
+        "h": 304
+      },
+      "anchor": {
+        "x": 593,
+        "y": 704
+      }
+    },
+    {
+      "name": "conewasp_attack",
+      "source": {
+        "x": 824,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 815,
+        "y": 461,
+        "w": 372,
+        "h": 244
+      },
+      "anchor": {
+        "x": 1001,
+        "y": 704
+      }
+    },
+    {
+      "name": "conewasp_hit",
+      "source": {
+        "x": 1208,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1233,
+        "y": 449,
+        "w": 283,
+        "h": 275
+      },
+      "anchor": {
+        "x": 1375,
+        "y": 723
+      }
+    },
+    {
+      "name": "conewasp_defeat",
+      "source": {
+        "x": 1592,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1623,
+        "y": 507,
+        "w": 295,
+        "h": 304
+      },
+      "anchor": {
+        "x": 1771,
+        "y": 810
+      }
+    },
+    {
+      "name": "sapslime_patrol",
+      "source": {
+        "x": 56,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 58,
+        "y": 905,
+        "w": 293,
+        "h": 188
+      },
+      "anchor": {
+        "x": 205,
+        "y": 1092
+      }
+    },
+    {
+      "name": "sapslime_telegraph",
+      "source": {
+        "x": 440,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 419,
+        "y": 785,
+        "w": 329,
+        "h": 308
+      },
+      "anchor": {
+        "x": 584,
+        "y": 1092
+      }
+    },
+    {
+      "name": "sapslime_attack",
+      "source": {
+        "x": 824,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 789,
+        "y": 887,
+        "w": 411,
+        "h": 206
+      },
+      "anchor": {
+        "x": 995,
+        "y": 1092
+      }
+    },
+    {
+      "name": "sapslime_hit",
+      "source": {
+        "x": 1208,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1229,
+        "y": 858,
+        "w": 314,
+        "h": 245
+      },
+      "anchor": {
+        "x": 1386,
+        "y": 1102
+      }
+    },
+    {
+      "name": "sapslime_defeat",
+      "source": {
+        "x": 1592,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1597,
+        "y": 995,
+        "w": 333,
+        "h": 108
+      },
+      "anchor": {
+        "x": 1764,
+        "y": 1102
+      }
+    },
+    {
+      "name": "barkmantis_patrol",
+      "source": {
+        "x": 56,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 34,
+        "y": 1125,
+        "w": 326,
+        "h": 360
+      },
+      "anchor": {
+        "x": 197,
+        "y": 1484
+      }
+    },
+    {
+      "name": "barkmantis_telegraph",
+      "source": {
+        "x": 440,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 445,
+        "y": 1124,
+        "w": 291,
+        "h": 361
+      },
+      "anchor": {
+        "x": 591,
+        "y": 1484
+      }
+    },
+    {
+      "name": "barkmantis_attack",
+      "source": {
+        "x": 824,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 784,
+        "y": 1121,
+        "w": 452,
+        "h": 366
+      },
+      "anchor": {
+        "x": 1010,
+        "y": 1486
+      }
+    },
+    {
+      "name": "barkmantis_hit",
+      "source": {
+        "x": 1208,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1274,
+        "y": 1149,
+        "w": 291,
+        "h": 338
+      },
+      "anchor": {
+        "x": 1420,
+        "y": 1486
+      }
+    },
+    {
+      "name": "barkmantis_defeat",
+      "source": {
+        "x": 1592,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1551,
+        "y": 1319,
+        "w": 395,
+        "h": 168
+      },
+      "anchor": {
+        "x": 1749,
+        "y": 1486
+      }
+    }
+  ]
+}

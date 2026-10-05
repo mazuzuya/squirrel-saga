@@ -1,0 +1,391 @@
+{
+  "image": "/generated-assets/area_landmark_atlas-transparent.webp",
+  "grid": {
+    "cols": 5,
+    "rows": 4,
+    "frameWidth": 320,
+    "frameHeight": 320
+  },
+  "frames": [
+    {
+      "name": "oak_gust_bell",
+      "source": {
+        "x": 56,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 50,
+        "y": 20,
+        "w": 300,
+        "h": 365
+      },
+      "anchor": {
+        "x": 200,
+        "y": 384
+      }
+    },
+    {
+      "name": "pine_resin_lantern",
+      "source": {
+        "x": 440,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 428,
+        "y": 20,
+        "w": 262,
+        "h": 365
+      },
+      "anchor": {
+        "x": 559,
+        "y": 384
+      }
+    },
+    {
+      "name": "canyon_wind_turbine",
+      "source": {
+        "x": 824,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 831,
+        "y": 20,
+        "w": 307,
+        "h": 370
+      },
+      "anchor": {
+        "x": 985,
+        "y": 389
+      }
+    },
+    {
+      "name": "root_burrow_switch",
+      "source": {
+        "x": 1208,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1202,
+        "y": 19,
+        "w": 344,
+        "h": 368
+      },
+      "anchor": {
+        "x": 1374,
+        "y": 386
+      }
+    },
+    {
+      "name": "cavern_color_prism",
+      "source": {
+        "x": 1592,
+        "y": 56,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1602,
+        "y": 26,
+        "w": 342,
+        "h": 364
+      },
+      "anchor": {
+        "x": 1773,
+        "y": 389
+      }
+    },
+    {
+      "name": "waterfall_waterwheel",
+      "source": {
+        "x": 56,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 26,
+        "y": 422,
+        "w": 349,
+        "h": 352
+      },
+      "anchor": {
+        "x": 201,
+        "y": 773
+      }
+    },
+    {
+      "name": "frost_heat_brazier",
+      "source": {
+        "x": 440,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 432,
+        "y": 421,
+        "w": 337,
+        "h": 350
+      },
+      "anchor": {
+        "x": 601,
+        "y": 770
+      }
+    },
+    {
+      "name": "clockwork_time_switch",
+      "source": {
+        "x": 824,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 839,
+        "y": 420,
+        "w": 308,
+        "h": 352
+      },
+      "anchor": {
+        "x": 993,
+        "y": 771
+      }
+    },
+    {
+      "name": "swamp_purifier_flower",
+      "source": {
+        "x": 1208,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1217,
+        "y": 432,
+        "w": 322,
+        "h": 342
+      },
+      "anchor": {
+        "x": 1378,
+        "y": 773
+      }
+    },
+    {
+      "name": "core_gravity_totem",
+      "source": {
+        "x": 1592,
+        "y": 440,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1602,
+        "y": 420,
+        "w": 336,
+        "h": 356
+      },
+      "anchor": {
+        "x": 1770,
+        "y": 775
+      }
+    },
+    {
+      "name": "redwood_tide_valve",
+      "source": {
+        "x": 56,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 42,
+        "y": 818,
+        "w": 327,
+        "h": 332
+      },
+      "anchor": {
+        "x": 206,
+        "y": 1149
+      }
+    },
+    {
+      "name": "orchard_lightning_rod",
+      "source": {
+        "x": 440,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 446,
+        "y": 806,
+        "w": 320,
+        "h": 347
+      },
+      "anchor": {
+        "x": 606,
+        "y": 1152
+      }
+    },
+    {
+      "name": "hive_honey_prism",
+      "source": {
+        "x": 824,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 823,
+        "y": 822,
+        "w": 323,
+        "h": 325
+      },
+      "anchor": {
+        "x": 985,
+        "y": 1146
+      }
+    },
+    {
+      "name": "ashen_ember_vent",
+      "source": {
+        "x": 1208,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1212,
+        "y": 802,
+        "w": 329,
+        "h": 350
+      },
+      "anchor": {
+        "x": 1377,
+        "y": 1151
+      }
+    },
+    {
+      "name": "moon_mirror",
+      "source": {
+        "x": 1592,
+        "y": 824,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1643,
+        "y": 803,
+        "w": 263,
+        "h": 350
+      },
+      "anchor": {
+        "x": 1775,
+        "y": 1152
+      }
+    },
+    {
+      "name": "skyroot_sky_anchor",
+      "source": {
+        "x": 56,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 28,
+        "y": 1183,
+        "w": 346,
+        "h": 366
+      },
+      "anchor": {
+        "x": 201,
+        "y": 1548
+      }
+    },
+    {
+      "name": "amber_fossil_drill",
+      "source": {
+        "x": 440,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 428,
+        "y": 1203,
+        "w": 343,
+        "h": 329
+      },
+      "anchor": {
+        "x": 600,
+        "y": 1531
+      }
+    },
+    {
+      "name": "chrono_master_dial",
+      "source": {
+        "x": 824,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 823,
+        "y": 1184,
+        "w": 324,
+        "h": 367
+      },
+      "anchor": {
+        "x": 985,
+        "y": 1550
+      }
+    },
+    {
+      "name": "dreamcap_dream_mirror",
+      "source": {
+        "x": 1208,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1204,
+        "y": 1184,
+        "w": 341,
+        "h": 364
+      },
+      "anchor": {
+        "x": 1375,
+        "y": 1547
+      }
+    },
+    {
+      "name": "celestial_star_seal",
+      "source": {
+        "x": 1592,
+        "y": 1208,
+        "w": 320,
+        "h": 320
+      },
+      "content": {
+        "x": 1598,
+        "y": 1183,
+        "w": 346,
+        "h": 368
+      },
+      "anchor": {
+        "x": 1771,
+        "y": 1550
+      }
+    }
+  ]
+}

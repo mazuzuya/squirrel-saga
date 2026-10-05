@@ -1,0 +1,505 @@
+/* Template contract — keep this sizing block intact when re-theming.
+   The game runs in an iframe inside iOS/Android WebViews, where viewport
+   units (100vh/100dvh/100vw) go stale after the view scrolls or hides and
+   leave blank bands; this container-percentage chain is what sizes the game
+   reliably. Restyle colors, fonts, and visuals freely, but do not replace
+   these sizing/overflow rules or size any root container in viewport units. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Low-specificity flex/grid shrink floor: intrinsic content must not widen or
+   deepen a layout track beyond the handheld frame. Component minimums win. */
+:where(#app *) {
+  min-width: 0;
+  min-height: 0;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #0e0e10;
+  color: #f5f5f5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  /* Text strokes are centered on glyph contours. Paint the fill last so an
+     outline stays outside instead of cutting into counters and thin strokes. */
+  paint-order: stroke fill;
+  /* Size container: children size type/spacing in cqw/cqh/cqmin units,
+     which track the actual game frame (viewport units are banned above). */
+  container-type: size;
+}
+
+/* Do not inherit the HTML text safeguard into SVG artwork, whose fill/stroke
+   layering may intentionally use the SVG default. */
+#app svg {
+  paint-order: normal;
+}
+
+canvas,
+.game-surface {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Template contract — fit-mechanics primitives. Layout is top-down: the
+   frame is the budget and content adapts to its box, so overflow is
+   impossible by construction. These classes carry ONLY fit mechanics —
+   shrink/wrap behavior, min-width: 0 (flex children otherwise refuse to
+   shrink below their text), truncation, container-query type scaling, 44px
+   touch minimums, and gaps. They are deliberately unstyled: their look
+   (colors, backgrounds, radii, borders, fonts) is yours to build from the
+   game's art direction. Custom controls and layouts are welcome too — keep
+   the same fit rules. Do not remove the sizing/min/max/overflow/gap rules. */
+
+/* Horizontal band of HUD stats. Wraps as a final containment fallback;
+   compact handheld frames can be short as well as narrow, so keep the
+   primary row iconic and hide/truncate secondary labels before relying on a
+   second line. Grid-track friendly: use as the `auto` rows of a
+   `grid-template-rows: auto minmax(0, 1fr) auto` page layout. */
+.hud-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  gap: clamp(6px, 2cqw, 14px);
+  padding: clamp(6px, 2cqmin, 12px);
+}
+
+/* Compact HUD stat (score, timer, lives). Truncates rather than breaking
+   layout as a last resort; add `flex-shrink: 0` to a badge that must never
+   truncate (score, timer) so decorative neighbors compress first. */
+.badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-inline: 0.4em;
+  font-size: clamp(12px, 3.5cqw, 18px);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Discrete status pips (hearts, lives, stars, ammo). Pips are fixed-size
+   flex items, NEVER repeated glyphs inside a truncating text run: glyphs
+   like ♥ resolve through different fallback fonts per browser, take
+   different widths, and get clipped by ellipsis in Firefox/Safari but not
+   Chrome. The fixed box is what makes a pip safe — its content can be
+   whatever fits the game: a glyph centered in the box (the box neutralizes
+   glyph-width differences), a generated sprite via `background: url(...)
+   center/contain no-repeat`, or an SVG/mask shape. */
+.pip-row {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(2px, 0.8cqw, 6px);
+}
+
+.pip {
+  flex: 0 0 auto;
+  width: clamp(12px, 4cqw, 20px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* Touch-control band. */
+.controls-row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  gap: clamp(12px, 3cqw, 20px);
+  padding: clamp(8px, 2cqmin, 14px);
+}
+
+/* Finger-sized control. 44px is the minimum touch target; the gap above is
+   the minimum separation. flex: 0 1 auto lets a crowded row shrink buttons
+   down to (but never below) the minimum. overflow keeps legacy raw-text
+   buttons contained; wrap text in .control-label for a visible ellipsis. */
+.control-btn {
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  min-width: 44px;
+  max-width: 100%;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5em 1em;
+  font-size: clamp(13px, 3.5cqw, 18px);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.control-label {
+  min-width: 0;
+  max-width: 100%;
+  padding-inline: 0.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root {
+  --ink: #f8f3d5;
+  --night: #08091b;
+  --panel: #10152d;
+  --cyan: #4de9dc;
+  --gold: #ffd262;
+  --magenta: #f052a3;
+  --pixel-font: "Silkscreen", ui-monospace, monospace;
+}
+
+.game-shell {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  background: var(--night);
+}
+
+.game-hud {
+  position: relative;
+  z-index: 5;
+  flex-wrap: nowrap;
+  min-height: clamp(48px, 10cqh, 68px);
+  padding: clamp(6px, 1.5cqmin, 10px) clamp(8px, 2cqw, 14px);
+  background: linear-gradient(#171d3c, #0b1026);
+  border-bottom: clamp(2px, .7cqmin, 4px) solid #2b3865;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .35);
+}
+
+.badge {
+  color: var(--ink);
+  font-family: var(--pixel-font);
+  font-size: clamp(10px, 2.7cqw, 15px);
+  letter-spacing: -.04em;
+}
+
+.area-badge {
+  flex: 1 1 auto;
+  gap: .65em;
+}
+
+.area-index {
+  flex: 0 0 auto;
+  color: var(--cyan);
+  font-size: 1.15em;
+}
+
+.area-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hud-center {
+  display: grid;
+  justify-items: center;
+  gap: clamp(3px, .7cqmin, 6px);
+  flex: 0 0 auto;
+}
+
+.heart-pip {
+  position: relative;
+  width: clamp(12px, 3.8cqw, 19px);
+  background: #3c2942;
+  border: 2px solid #080b1e;
+  transform: rotate(45deg) scale(.74);
+  overflow: visible;
+}
+
+.heart-pip::before,
+.heart-pip::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.heart-pip::before { left: -35%; top: 0; }
+.heart-pip::after { left: 0; top: -35%; }
+.heart-pip.is-full { background: #ff547d; }
+
+.stamina-track {
+  width: clamp(66px, 19cqw, 118px);
+  height: clamp(6px, 1.8cqmin, 10px);
+  padding: 2px;
+  background: #050817;
+  border: 1px solid #3f4c7f;
+}
+
+.stamina-track i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #34c96c, #9af273);
+  transition: width .12s linear;
+}
+
+.hud-right {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(5px, 1.2cqw, 10px);
+}
+
+.key-badge {
+  flex: 0 0 auto;
+  color: #b8c0da;
+  background: #070b1e;
+  border: 2px solid #303c69;
+  padding-block: .28em;
+}
+
+.key-badge b { color: #66728f; }
+.key-badge.is-complete { color: var(--gold); border-color: #9a7332; }
+.key-badge.is-complete b { color: var(--gold); }
+
+.timer-badge {
+  flex: 0 0 auto;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-badge.is-danger { color: #ff557e; animation: danger-pulse .65s steps(2) infinite; }
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  color: #c7d0ee;
+  font-family: var(--pixel-font);
+  background: #151c39;
+  border: 2px solid #3c4b7d;
+  border-radius: 4px;
+}
+
+.game-stage {
+  position: relative;
+  overflow: hidden;
+  background: #070817;
+  isolation: isolate;
+}
+
+.game-surface {
+  position: absolute;
+  inset: 0;
+  image-rendering: pixelated;
+}
+
+.loading-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1em;
+  color: var(--ink);
+  background: #090b20;
+  font: 700 clamp(12px, 3cqw, 17px)/1.4 var(--pixel-font);
+}
+
+.loading-acorn {
+  color: var(--gold);
+  font-size: min(14cqw, 14cqh, 56px);
+  animation: rune-turn 1.2s steps(8) infinite;
+}
+
+.game-toast {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: clamp(10px, 3cqh, 24px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(88%, 540px);
+  padding: .58em .85em;
+  color: #fff8d9;
+  background: rgba(7, 10, 28, .94);
+  border: 2px solid #4c5b8d;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, .45);
+  font: 700 clamp(11px, 3cqw, 15px)/1.4 Inter, sans-serif;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 4cqmin, 28px);
+  background: rgba(4, 5, 16, .78);
+}
+
+.overlay-panel {
+  width: min(100%, 480px);
+  max-height: 100%;
+  overflow: auto;
+  padding: clamp(14px, 4cqmin, 24px);
+  color: var(--ink);
+  background: #11162e;
+  border: 3px solid #485989;
+  box-shadow: 8px 8px 0 #050611, inset 0 0 0 3px #202a50;
+  text-align: center;
+}
+
+.overlay h2 {
+  margin: 0 0 .75em;
+  color: var(--gold);
+  font: 700 min(7cqw, 5cqh, 28px)/1.25 var(--pixel-font);
+}
+
+.overlay p { margin: .5em 0 1.2em; font-size: clamp(12px, 3.4cqw, 17px); }
+.overlay-actions { display: grid; gap: 10px; margin-top: 14px; }
+
+.menu-btn,
+.area-select button {
+  min-height: 44px;
+  color: var(--ink);
+  background: #20294e;
+  border: 2px solid #52659c;
+  box-shadow: 0 4px 0 #080b1b;
+  font: 700 clamp(11px, 3cqw, 15px)/1 var(--pixel-font);
+}
+
+.menu-btn:active,
+.area-select button:active { transform: translateY(3px); box-shadow: 0 1px 0 #080b1b; }
+.area-select { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.area-select button { aspect-ratio: 1; min-height: 38px; }
+.area-select button:disabled { opacity: .25; }
+.area-select button.is-current { color: #091020; background: var(--cyan); border-color: #b9fff8; }
+.skin-heading {
+  margin: 1.2em 0 .65em;
+  color: #aebbe2;
+  font: 700 clamp(11px, 3cqw, 14px)/1 var(--pixel-font);
+}
+.skin-select { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.skin-option {
+  min-height: 52px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 7px 8px;
+  color: var(--ink);
+  background: #171d3b;
+  border: 2px solid color-mix(in srgb, var(--skin-color) 55%, #39456e);
+  text-align: start;
+}
+.skin-option b { overflow: hidden; text-overflow: ellipsis; font: 700 clamp(9px, 2.5cqw, 12px)/1.2 var(--pixel-font); white-space: nowrap; }
+.skin-option small { color: #aeb9d7; font: 700 clamp(9px, 2.5cqw, 12px)/1.2 Inter, sans-serif; }
+.skin-option.is-current { color: #071020; background: var(--skin-color); border-color: #fff7d6; }
+.skin-option.is-current small { color: #10172b; }
+.result-rune { color: var(--cyan); font-size: min(15cqw, 12cqh, 60px); animation: rune-turn 2s steps(12) infinite; }
+
+.game-controls {
+  position: relative;
+  z-index: 7;
+  min-height: clamp(62px, 13cqh, 88px);
+  justify-content: space-between;
+  padding: clamp(7px, 1.8cqmin, 12px) clamp(10px, 3cqw, 22px);
+  background: linear-gradient(#121730, #080b1c);
+  border-top: clamp(2px, .7cqmin, 4px) solid #2f3d68;
+}
+
+.control-cluster { display: flex; align-items: center; gap: clamp(12px, 3cqw, 20px); }
+.control-btn {
+  color: #dce5ff;
+  font-family: var(--pixel-font);
+  font-weight: 700;
+  background: #1a2244;
+  border: 2px solid #50639b;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #060817;
+}
+
+.control-btn.is-held { transform: translateY(4px); box-shadow: 0 1px 0 #060817; filter: brightness(1.3); }
+.round-btn { width: clamp(48px, 12cqw, 64px); padding: 0; color: var(--cyan); font-size: clamp(16px, 5cqw, 24px); }
+.action-btn { padding-inline: clamp(7px, 2cqw, 14px); }
+.attack-btn { color: #ff8b6e; border-color: #9d4d5b; }
+.context-btn { color: #9cecff; }
+.jump-btn { min-width: clamp(72px, 20cqw, 118px); color: #ffe179; border-color: #957a3d; }
+
+@keyframes rune-turn { to { transform: rotate(360deg); } }
+@keyframes danger-pulse { 50% { opacity: .45; } }
+
+@container (max-width: 430px) {
+  .area-name { display: none; }
+  .game-controls { padding-inline: 7px; }
+  .control-cluster { gap: 8px; }
+  .action-btn { min-width: 48px; padding-inline: 3px; }
+  .jump-btn { min-width: 70px; }
+}
+
+@container (max-height: 520px) {
+  .game-hud { min-height: 44px; padding-block: 4px; }
+  .game-controls { min-height: 56px; padding-block: 5px; }
+  .control-btn { min-height: 44px; }
+  .stamina-track { height: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-acorn, .result-rune, .timer-badge.is-danger { animation: none; }
+}
